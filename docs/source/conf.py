@@ -65,8 +65,8 @@ master_doc = 'index'
 
 # General information about the project.
 project = 'K3D-jupyter'
-copyright = u'2019, Marcin Kostur, Artur Trzęsiok, Filip Kaśkosz'
-author = u'Marcin Kostur, Artur Trzęsiok, Filip Kaśkosz'
+copyright = u"2019, Marcin Kostur, Artur Trzesiok, Filip Kaskosz"
+author = u"Marcin Kostur, Artur Trzesiok, Filip Kaskosz"
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
@@ -154,7 +154,7 @@ latex_elements = {
 #  author, documentclass [howto, manual, or own class]).
 latex_documents = [
     (master_doc, 'K3D-jupyter.tex', 'K3D-jupyter Documentation',
-     'Marcin Kostur, Artur Trzęsiok', 'manual'),
+     u"Marcin Kostur, Artur Trzęsiok", 'manual'),
 ]
 
 # -- Options for manual page output ---------------------------------------
@@ -212,11 +212,11 @@ def add_scripts(app):
     app.add_javascript('require_config.js')
 
     if not on_rtd:
-        src = os.path.join(here, '..', '..', 'js', 'dist', 'index.js')
+        src = os.path.join(here, '..', '..', 'js', 'src', 'index.js')
         dst = os.path.join(here, '_static', 'k3d.js')
         copyfile(src, dst)
 
-        src = os.path.join(here, '..', '..', 'js', 'dist', 'standalone.js')
+        src = os.path.join(here, '..', '..', 'js', 'src', 'standalone.js')
         dst = os.path.join(here, '_static', 'standalone.js')
         copyfile(src, dst)
     else:
